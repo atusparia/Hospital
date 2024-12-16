@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Instancia de la base de datos
 builder.Services.AddSingleton<DemoContext>();
 
 var app = builder.Build();

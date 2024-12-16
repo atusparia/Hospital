@@ -7,10 +7,10 @@
 
         public bool? Activo { get; set; }
 
-        public int PacienteID { get; set; }
-        Paciente Paciente { get; set; }
+        public int HistoriaClinicaID { get; set; }
+        public HistoriaClinica HistoriaClinica { get; set; }
 
         public int EspecialidadID { get; set; }
-        Especialidad Especialidad { get; set; }
+        public Especialidad Especialidad { get; set; }
     }
 }
