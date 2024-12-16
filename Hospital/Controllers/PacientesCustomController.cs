@@ -19,6 +19,22 @@ namespace Hospital.Controllers
             }
         }
 
+        [HttpGet]
+        public List<PacienteResponseV1> ListarPacientesDatos() {
+            using (var context = new DemoContext()) 
+            { 
+                var pacientes = context.Pacientes.ToList();
+
+                var response = pacientes.Select(x=> new PacienteResponseV1 { 
+                    Nombres = x.Nombres,
+                    Apellidos = x.Apellidos,
+                    Celular = x.Celular,
+                }).ToList();
+
+                return response;
+            }
+        }
+
         [HttpPost]
         public void Insert(Paciente paciente)
         {
